@@ -1,6 +1,6 @@
 [project]
 authors = [
-  {name = "Ali Hajimirza (ali92hm)", email = "ali@alihm.net"},
+  {name = "Ali Hajimirza", email = "ali@alihm.net"},
 ]
 classifiers = [
   "Development Status :: 4 - Beta",
@@ -8,8 +8,7 @@ classifiers = [
   "Programming Language :: Python :: 3 :: Only",
   "Programming Language :: Python :: 3.7",
   "Programming Language :: Python :: 3.8",
-  "Programming Language :: Python :: 3.9",
-  "License :: OSI Approved :: ISC License (ISCL)",
+  "Programming Language :: Python :: 3.9", #   "License :: OSI Approved :: MIT license", TODO
   "Operating System :: OS Independent",
 ]
 dependencies = [
@@ -21,21 +20,21 @@ keywords = [
 ]
 license = {file = "LICENSE"}
 maintainers = [
-  {name = "Ali Hajimirza (ali92hm)", email = "ali@alihm.net"},
+  {name = "Ali Hajimirza", email = "ali@alihm.net"},
 ]
 name = "test-cookiecutter-ali92hm"
 readme = "README.md"
 requires-python = ">=3.7"
-version = "0.1.1"
+version = "0.2.0"
 
 [project.urls]
-changelog = "github.com/ali92hm/test-cookiecutter/blob/master/CHANGELOG.md"
-documentation = "github.com/ali92hm/test-cookiecutter/blob/master/README.md"
+changelog = "https://github.com/ali92hm/test-cookiecutter/blob/master/CHANGELOG.md"
+documentation = "https://github.com/ali92hm/test-cookiecutter/blob/master/README.md"
 homepage = "https://github.com/ali92hm/test-cookiecutter"
 repository = "github.com"
 
 [project.entry-points]
-test_cookiecutter = "test_cookiecutter_ali92hm.cli.entrypoint:main"
+test-cookiecutter-ali92hm = "test_cookiecutter_ali92hm.cli.entrypoint:main"
 
 [build-system]
 build-backend = "setuptools.build_meta"
