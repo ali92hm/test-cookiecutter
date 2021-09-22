@@ -26,7 +26,7 @@ maintainers = [
 name = "test-cookiecutter-ali92hm"
 readme = "README.md"
 requires-python = ">=3.7"
-version = "0.1.0"
+version = "0.1.1"
 
 [project.urls]
 changelog = "github.com/ali92hm/test-cookiecutter/blob/master/CHANGELOG.md"
