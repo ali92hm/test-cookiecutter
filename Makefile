@@ -5,34 +5,27 @@ init:
 	pip install -r requirements.txt
 
 clean:
-	rm -rf .mypy_cache
-	rm -rf .pytest_cache
-	rm -fr dist/
-	rm -fr build/
-	rm -rf *.egg-info/
-	rm -rf *.egg
-	find . -name '*.pyc' -exec rm -f {} +
-	find . -name '*.pyo' -exec rm -f {} +
-	find . -name '*~' -exec rm -f {} +
-	find . -name '__pycache__' -exec rm -fr {} +
+	./scripts/clean.sh
 
 check-style:
-	flake8 .
+	./scripts/check-style.sh
 
 fix-style:
-	black .
+	./scripts/fix-style.sh
 
 check-types:
 	mypy .
 
-test:
-	pytest
+test-unit:
+	./scripts/test-unit.sh
 
-release:
-	twine upload dist/*
+test-integration:
+	./scripts/test-integration.sh
+
+test: test-unit test-integration
 
 build: clean
-	python setup.py sdist bdist_wheel
+	python setup.py sdist bdist_wheel --universal
 
 ci: check-style check-types test
 

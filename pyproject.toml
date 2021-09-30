@@ -2,15 +2,21 @@
 authors = [
   {name = "Ali Hajimirza", email = "ali@alihm.net"},
 ]
+
 classifiers = [
-  "Development Status :: 4 - Beta",
+  "Development Status :: 3 - Alpha",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3 :: Only",
   "Programming Language :: Python :: 3.7",
   "Programming Language :: Python :: 3.8",
-  "Programming Language :: Python :: 3.9", #   "License :: OSI Approved :: MIT license", TODO
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
   "Operating System :: OS Independent",
+  "License :: OSI Approved :: ISC License (ISCL)",
+  "Typing :: Typed",
 ]
+
 dependencies = [
   # fill me
 ]
@@ -25,7 +31,7 @@ maintainers = [
 name = "test-cookiecutter-ali92hm"
 readme = "README.md"
 requires-python = ">=3.7"
-version = "0.2.0"
+version = "0.1.0"
 
 [project.urls]
 changelog = "https://github.com/ali92hm/test-cookiecutter/blob/master/CHANGELOG.md"
@@ -36,6 +42,8 @@ repository = "github.com"
 [project.entry-points]
 test-cookiecutter-ali92hm = "test_cookiecutter_ali92hm.cli.entrypoint:main"
 
+[project.gui-scripts]
+
 [build-system]
 build-backend = "setuptools.build_meta"
 requires = [
@@ -45,10 +53,9 @@ requires = [
 ]
 
 [tool.isort]
-force_grid_wrap = 0
-include_trailing_comma = true
 multi_line_output = 3
-use_parentheses = true
+profile = "black"
+skip = ""
 
 [tool.pytest.ini_options]
 testpaths = [
@@ -56,6 +63,12 @@ testpaths = [
 ]
 
 [tool.black]
+exclude = '''
+/(
+|dist
+|docs
+)/
+'''
 target-version = ['py39']
 
 [tool.mypy]
