@@ -1,3 +1,8 @@
+__title__ = "test-cookiecutter-ali92hm"
+__description__ = "Generated sample project from cookiecutter-pyproject"
+__url__ = "https://github.com/ali92hm/test-cookiecutter/blob/master/README.md"
 __author__ = "Ali Hajimirza"
 __email__ = "ali@alihm.net"
+__copyright__ = "Copyright 2021 Ali Hajimirza"
+__license__ = "ISC License"
 __version__ = "0.3.0"
